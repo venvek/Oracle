@@ -24,7 +24,7 @@ public class OracleInsert {
 			String sql4 = "SELECT MAX(deptno) FROM DEPT";
 			ResultSet rs = stmt.executeQuery(sql4);
 			rs.next();
-				System.out.print(rs.getString("max(deptno)");
+				System.out.print(rs.getString("max(deptno)"));
 				
 			String ldeptno = "60", ldname = "car", lsloc = "incheon";
 			String sql3 = "INSERT INTO dept VALUES ("	+ ldeptno + "','" + ldname + "','" + lsloc + "')";	
@@ -46,7 +46,7 @@ public class OracleInsert {
 				System.out.println("Insert fail.\n");
 			}
 			String sql2 = "SELECT deptno, dname, loc FROM dept";
-			ResultSet rs = stmt.executeQuery(sql2);
+			ResultSet rs1 = stmt.executeQuery(sql2);
 			while(rs.next()) {
 				System.out.print(rs.getString("deptno") + "\t");
 				System.out.print(rs.getString("dname") + "\t");
