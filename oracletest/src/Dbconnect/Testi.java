@@ -62,8 +62,12 @@ public class Testi extends JFrame {
 		btnNewButton.setBounds(977, 553, 97, 37);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("상세정보");
-		btnNewButton_1.setBounds(1086, 552, 97, 38);
+		JButton btnNewButton_1 = new JButton("티켓취소하기");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_1.setBounds(1086, 552, 121, 38);
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel_1 = new JLabel("상세 내역");

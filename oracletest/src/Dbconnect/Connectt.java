@@ -10,8 +10,6 @@ public class Connectt {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Connection conn = null;
-		
-		
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			
@@ -21,10 +19,10 @@ public class Connectt {
 					"green1234"				
 					);
 			String sql = "" + "SELECT movie_id, title, location, screen " + 
-						 " FROM movie " + " WHERE title = ? ";
-			
+						 " FROM movie ";
+				
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "범죄도시4");
+			//pstmt.setString(1, "범죄도시4");
 			
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) {
@@ -36,7 +34,6 @@ public class Connectt {
 				
 				System.out.println(movi);
 			}
-			
 			pstmt.close();
 		} 
 		catch (ClassNotFoundException e) {
@@ -51,7 +48,6 @@ public class Connectt {
 				conn.close();
 			} catch (SQLException e) {}
 			}
-		
 	}
 }
 }
